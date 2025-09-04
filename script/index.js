@@ -13,6 +13,27 @@ const loadLevelWord = (id) => {
     .then((json) => displayLevelWord(json.data));
 };
 
+// Display Every Lesson Via API Call -------------------------------------
+const displayLessons = (lessons) => {
+  // Get container and initially erase it ----------------
+  const levelContainer = document.getElementById("level-container");
+  levelContainer.innerHTML = "";
+
+  // Get every lesson individually --------------------
+  for (const lesson of lessons) {
+    // Create a div element to show every data -------------------
+    const btnDiv = document.createElement("div");
+    btnDiv.innerHTML = `
+    <button onclick="loadLevelWord(${lesson.level_no})" class="btn btn-outline btn-primary text-sm ">
+        <i class="fa-solid fa-book-open"></i>
+        Lesson - ${lesson.level_no}
+    </button>`;
+    // Append dynamic div with data into the container ------------
+    levelContainer.append(btnDiv);
+  }
+};
+
+// Display Lesson wise Word from API
 const displayLevelWord = (words) => {
   const wordContainer = document.getElementById("word-container");
   wordContainer.innerHTML = "";
@@ -47,26 +68,6 @@ const displayLevelWord = (words) => {
     `;
     wordContainer.append(wordCard);
   });
-};
-
-// Display Every Lesson Via API Call -------------------------------------
-const displayLessons = (lessons) => {
-  // Get container and initially erase it ----------------
-  const levelContainer = document.getElementById("level-container");
-  levelContainer.innerHTML = "";
-
-  // Get every lesson individually --------------------
-  for (const lesson of lessons) {
-    // Create a div element to show every data -------------------
-    const btnDiv = document.createElement("div");
-    btnDiv.innerHTML = `
-    <button onclick="loadLevelWord(${lesson.level_no})" class="btn btn-outline btn-primary text-sm ">
-        <i class="fa-solid fa-book-open"></i>
-        Lesson - ${lesson.level_no}
-    </button>`;
-    // Append dynamic div with data into the container ------------
-    levelContainer.append(btnDiv);
-  }
 };
 
 loadLessons();
