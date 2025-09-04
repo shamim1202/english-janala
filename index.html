@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>English Janala -</title>
+    <title>English Janala - Learn English Easy</title>
 
     <!------- Page Fav Icon----->
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
@@ -36,5 +36,117 @@
     <!------ My Custom CSS Style ------>
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!--------- Navigation Bar --------->
+    <header class="bg-[#badeff42] shadow-sm">
+      <div class="navbar w-11/12 !mx-auto">
+        <!------- Left ------->
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 ?mt-1 w-32 !mt-6 !ml-3 shadow"
+            >
+              <li>
+                <a href="" class="btn btn-outline btn-primary !px-5"
+                  ><i class="fa-solid fa-circle-question"></i>FAQ</a
+                >
+              </li>
+              <li class="!my-2">
+                <a href="" class="btn btn-outline btn-primary !px-5"
+                  ><i class="fa-solid fa-book-open"></i>Learn</a
+                >
+              </li>
+              <li>
+                <a href="" class="btn btn-outline btn-primary !px-5"
+                  ><i class="fa-solid fa-right-from-bracket"></i>Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="flex items-center gap-1">
+            <span class="text-lg md:text-xl font-bold">English</span>
+            <img src="./assets/logo.png" alt="" srcset="" />
+            <span class="font-bangla md:text-xl font-semibold md:font-bold"
+              >জানালা</span
+            >
+          </a>
+        </div>
+
+        <!-------- Right ------>
+        <div class="navbar-end hidden md:flex">
+          <ul class="menu menu-horizontal px-1 !space-x-3">
+            <li class="">
+              <a href="" class="btn btn-outline btn-primary !px-5"
+                ><i class="fa-solid fa-circle-question"></i>FAQ</a
+              >
+            </li>
+            <li class="">
+              <a href="" class="btn btn-outline btn-primary !px-5"
+                ><i class="fa-solid fa-book-open"></i>Learn</a
+              >
+            </li>
+            <li class="">
+              <a href="" class="btn btn-outline btn-primary !px-5"
+                ><i class="fa-solid fa-right-from-bracket"></i>Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!--------- Banner Section ---------->
+    <section
+      class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-11/12 mx-auto my-10"
+    >
+      <!-------- Text Content -------->
+      <div class="flex-1">
+        <h2
+          class="text-2xl md:text-4xl text-center md:text-left font-semibold md:font-bold"
+        >
+          <span class="text-[#00bcff]">English</span> is Easy!!!
+        </h2>
+        <p class="md:w-10/12 text-justify md:text-left font-bangla my-5">
+          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+          আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+          অন্য একটি Level এ
+        </p>
+        <div class="flex flex-col gap-3">
+          <input
+            type="text"
+            placeholder="Your Name Here"
+            class="input w-full md:w-1/2"
+          />
+          <input
+            type="text"
+            placeholder="************"
+            class="input w-full md:w-1/2"
+          />
+          <button class="btn btn-primary w-full md:w-28">Get Started</button>
+        </div>
+      </div>
+
+      <!-------- Image Content -------->
+      <div class="flex-1">
+        <img src="./assets/hero-student.png" alt="" srcset="" />
+      </div>
+    </section>
+  </body>
 </html>
